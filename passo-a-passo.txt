@@ -1,0 +1,18 @@
+// curso - udemy - https://www.udemy.com/course/angular-dotnetcore-efcore/learn/lecture/13252324?start=315#questions
+// video - 19 - retornando dados
+
+//criar construtor no Controller (ValuesControllers.cs)
+public  ValuesController(DataContext context)
+        public readonly DataContext _context;
+        { _context = context; }
+      
+        // GET api/values
+        [HttpGet]
+        public ActionResult<IEnumerable<Evento>> Get()
+        { return _context.Eventos.ToList(); }
+
+// video - 20 - try catch
+1- mudar para IActionResult 
+
+//video 21 - retorno assincrono
+colocar no IActionResult public async
